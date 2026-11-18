@@ -1,0 +1,2 @@
+# lakehouse_lakebase_sync_demo
+LakehouseとLkaebaseの双方向の同期デモ

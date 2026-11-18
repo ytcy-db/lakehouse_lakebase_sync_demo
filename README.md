@@ -75,11 +75,11 @@ flowchart LR
         S["survey_app.survey_responses<br/>アンケート回答（読み書き）<br/>REPLICA IDENTITY FULL"]
     end
 
-    API -- "社内システム：DBSQL で読み書き" --> WH
-    API -- "顧客アプリ：Postgres で読み書き" --> LB
+    API -->|"社内システム：DBSQL で読み書き"| WH
+    API -->|"顧客アプリ：Postgres で読み書き"| LB
 
-    P == "① 同期テーブル（Continuous）" ==> PS
-    S == "② Lakebase CDF（約 15 秒ごと）" ==> H
+    P ==>|"① 同期テーブル（Continuous）"| PS
+    S ==>|"② Lakebase CDF（約 15 秒ごと）"| H
 ```
 
 ### 構成要素
